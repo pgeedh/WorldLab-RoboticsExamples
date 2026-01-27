@@ -2,6 +2,13 @@
 
 > "The definitive resource for Spatial Intelligence in Robotics powered by World Labs."
 
+## 📖 About
+**WorldLab Robotics Examples** is a pioneering open-source initiative designed to bridge the gap between **Generative AI** and **Embodied Intelligence**. Traditional robotics training suffers from the "Sim-to-Real" gap—where simulations look too perfect and lack the chaotic nuance of the real world.
+
+This repository uses **World Labs' proprietary Large World Models (LWMs)** to generate "Physically Grounded Digital Twins". Instead of artist-created assets, we use engineering-grade prompts to spawn 3D-consistent, photorealistic environments that test the limits of robot perception, planning, and interaction.
+
+Whether you are testing a **quadruped on a construction site**, a **manipulator in a messy bedroom**, or a **social robot in a hotel lobby**, this dataset provides the **visual and semantic complexity** needed for robust AI.
+
 A curated, community-driven collection of high-fidelity prompts, synthetic world definitions, and scenario blueprints for training the next generation of embodied AI.
 
 ## 🚀 Mission
