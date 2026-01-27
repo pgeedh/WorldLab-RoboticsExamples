@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌍🤖 Awesome World Labs Robotics
+# 🌍🤖 World Labs Robotics Examples
 
 **The Definitive Resource for Spatial Intelligence in Robotics**  
 *Powered by [World Labs](https://www.worldlabs.ai/)*
