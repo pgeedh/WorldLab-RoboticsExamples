@@ -170,6 +170,12 @@ cable_task = [t for t in tasks[1]["prompts"] if t["id"] == "manip_cable_01"][0]
 print(f"Task: {cable_task['task']}")
 ```
 
+## 📚 Tutorials & Integrations
+
+### 🎮 Sim-to-Real with NVIDIA Isaac Sim
+Want to take these "Digital Twins" into a physics-based simulator? Check out our complete guide on exporting World Lab models:
+**[From Imagination to Simulation: A Complete Guide to Importing World Labs Marble Models into NVIDIA Isaac Sim](https://medium.com/@geedhpruthvi/from-imagination-to-simulation-a-complete-guide-to-importing-world-labs-marble-models-into-nvidia-69dde0ed5d6e?postPublishedType=initial)**
+
 ## 🤝 Contributing
 Have a new robotics use case?
 1. Fork the repo.
