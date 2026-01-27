@@ -40,7 +40,7 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 ![PCB Assembly](worlds/api_renders/electronic_assembly_line_pcb_thumbnail.jpg)
 
 #### Data Center (Cable Maintenance)
-> **Prompt**: "A narrow server aisle in a hyperscale data center. Densely packed server racks with blinking status LEDs (green/amber). The focus is on the rear cable management area: a chaotic mix of blue (CAT6) and orange (Fiber) cables. Some cables are unplugged and hanging loose. The environment is metallic, reflective, and cool-toned. Intricate geometry for occlusion testing. 4k resolution."
+> **Prompt**: "**System Role:** Senior Simulation Engineer specializing in Deformable Linear Objects (DLOs). **Objective:** Generate a high-fidelity 3D simulation environment for 'Data Center Cable Remediation'. **1. Scene:** Standard 42U Data Center Server Rack. Lighting: Dim, overhead with localized shadowing. Focus: Rack Unit 14 (RU14). Target: Switch Port 12 (empty/highlighted). **2. Object (Cable):** Standard CAT6 Ethernet Cable, Blue (#0000FF). Physics: Deformable Linear Object (DLO) with semi-rigid PVC stiffness (Young's Modulus ~0.05 GPa) to prevent self-intersections. Connector: RJ45 male with a fragile locking clip. **3. Task:** Insert connector into Port 12. **4. Dynamics:** Apply forward linear force (Target: 15N, Max: 20N) to click, then reverse 2mm to verify latch. **5. Complexity:** Add visual clutter to Ports 1-11 and randomize initial connector yaw/pitch by ±45°."
 
 ![Data Center](worlds/api_renders/data_center_wire_maintenance_thumbnail.jpg)
 
