@@ -30,20 +30,20 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 #### Domestic Kitchen (Robotics Training)
 > **Prompt**: "A hyper-realistic, robot-centric digital twin of a modern domestic kitchen. Captured from a 1.2m height (robot eye level). Key interaction zones include a granite island with specific grasping targets..."
 
-[![Domestic Kitchen](worlds/api_renders/domestic_kitchen_robotics_thumbnail.jpg)](https://marble.worldlabs.ai/world/3b294e60-e6d7-4f69-8d7a-d3b11db89c56)
-👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/3b294e60-e6d7-4f69-8d7a-d3b11db89c56)**
+[![Domestic Kitchen](worlds/api_renders/domestic_kitchen_robotics_thumbnail.jpg)](https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5)**
 
 #### Cluttered Bedroom (Manipulation)
 > **Prompt**: "A physically simulated messy bedroom for high-complexity manipulation training... A tangled pile of laundry (red t-shirt, blue jeans, white socks) rests on an unmade bed..."
 
-![Cluttered Bedroom](worlds/api_renders/cluttered_bedroom_manipulation_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Cluttered Bedroom](worlds/api_renders/cluttered_bedroom_manipulation_thumbnail.jpg)](https://marble.worldlabs.ai/world/627c431e-1d72-4337-b524-48aeba0d8036)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/627c431e-1d72-4337-b524-48aeba0d8036)**
 
 #### Messy Airbnb (Housekeeping)
 > **Prompt**: "A 'lived-in' living room state for housekeeping robots. An open suitcase sits on a rug, spilling patterned clothing... The scene tests the robot's ability to distinguish between 'trash' and 'personal items'..."
 
-![Messy Airbnb](worlds/api_renders/messy_airbnb_living_room_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Messy Airbnb](worlds/api_renders/messy_airbnb_living_room_thumbnail.jpg)](https://marble.worldlabs.ai/world/dc8c046a-f4ad-438f-afc7-e2bc5b124333)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/dc8c046a-f4ad-438f-afc7-e2bc5b124333)**
 
 ### 🏭 Industrial & Logistics
 
