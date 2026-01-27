@@ -1,17 +1,25 @@
-# Awesome World Labs Robotics 🌍🤖
+<div align="center">
 
-> "The definitive resource for Spatial Intelligence in Robotics powered by World Labs."
+# 🌍🤖 Awesome World Labs Robotics
+
+**The Definitive Resource for Spatial Intelligence in Robotics**  
+*Powered by [World Labs](https://www.worldlabs.ai/)*
+
+[![World Labs API](https://img.shields.io/badge/World%20Labs-API%20v1-black?style=for-the-badge&logo=openai&logoColor=white)](https://platform.worldlabs.ai)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-green?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
+
+[**📚 Documentation**](https://docs.worldlabs.ai) | [**🚀 Get Started**](#-quick-start) | [**🐙 GitHub Repo**](https://github.com/pgeedh/WorldLab-RoboticsExamples)
+
+</div>
+
+---
 
 ## 📖 About
-**WorldLab Robotics Examples** is a pioneering open-source initiative designed to bridge the gap between **Generative AI** and **Embodied Intelligence**. Traditional robotics training suffers from the "Sim-to-Real" gap—where simulations look too perfect and lack the chaotic nuance of the real world.
+**WorldLab Robotics Examples** bridges the gap between **Generative AI** and **Embodied Intelligence**. Traditional simulations are too sterile; real-world data is too expensive. We use **World Labs' Large World Models (LWMs)** to generate "Physically Grounded Digital Twins"—chaotic, photorealistic, and 3D-consistent environments engineering-grade spatial reasoning.
 
-This repository uses **World Labs' proprietary Large World Models (LWMs)** to generate "Physically Grounded Digital Twins". Instead of artist-created assets, we use engineering-grade prompts to spawn 3D-consistent, photorealistic environments that test the limits of robot perception, planning, and interaction.
-
-Whether you are testing a **quadruped on a construction site**, a **manipulator in a messy bedroom**, or a **social robot in a hotel lobby**, this dataset provides the **visual and semantic complexity** needed for robust AI.
-
-A curated, community-driven collection of high-fidelity prompts, synthetic world definitions, and scenario blueprints for training the next generation of embodied AI.
-
-## 🚀 Mission
+Whether you are testing a **quadruped on a construction site**, a **manipulator in a messy bedroom**, or a **social robot in a hotel lobby**, this repository provides the "Digital Twin" blueprints you need.
 Physical intelligence requires physical data. This repository leverages the **World Labs API** to generate unlimited, photorealistic, and 3D-consistent environments ("Digital Twins") for robotics training—ranging from domestic chores to complex industrial assembly.
 
 ## 📸 Visual Catalog & High-Fidelity Prompts
