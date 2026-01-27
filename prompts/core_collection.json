@@ -1,0 +1,86 @@
+[
+  {
+    "category": "Navigation & Mobility",
+    "prompts": [
+      {
+        "id": "nav_social_01",
+        "title": "Hotel Lobby Navigation",
+        "task": "Navigate from the entrance to the reception desk without entering the personal space of waiting guests.",
+        "environment_ref": "hotel_reception_concierge",
+        "constraints": [
+          "Keep 1m distance from humans",
+          "Smooth acceleration"
+        ]
+      },
+      {
+        "id": "nav_urban_01",
+        "title": "Sidewalk Obstacle Avoidance",
+        "task": "Traverse the sidewalk segment while avoiding static obstacles (hydrants) and dynamic zones (doorways).",
+        "environment_ref": "city_sidewalk_delivery",
+        "constraints": [
+          "Stay within pavement boundaries",
+          "Yield at crosswalk"
+        ]
+      },
+      {
+        "id": "nav_narrow_01",
+        "title": "Restaurant Table Service",
+        "task": "Move from the kitchen pass to Table 4 through the narrow gap between occupied chairs.",
+        "environment_ref": "restaurant_dining_service",
+        "constraints": [
+          "Minimize vibration",
+          "No collision"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Manipulation & Interaction",
+    "prompts": [
+      {
+        "id": "manip_fine_01",
+        "title": "PCB Component Inspection",
+        "task": "Locate the C4 capacitor on the PCB and position the camera for a macro inspection of the solder joints.",
+        "environment_ref": "electronic_assembly_line_pcb",
+        "target": "C4 Capacitor",
+        "action": "Visual Inspection"
+      },
+      {
+        "id": "manip_cable_01",
+        "title": "Data Center Cable Plug-in",
+        "task": "Identify the loose blue ethernet cable and insert it into Port 12 of Server Rack B.",
+        "environment_ref": "data_center_wire_maintenance",
+        "complexity": "Extremely High"
+      },
+      {
+        "id": "manip_household_01",
+        "title": "Laundry Sorting",
+        "task": "Pick up the red t-shirt from the bed and place it in the hamper, distinguishing it from the white sheets.",
+        "environment_ref": "cluttered_bedroom_manipulation"
+      }
+    ]
+  },
+  {
+    "category": "Perception & Semantics",
+    "prompts": [
+      {
+        "id": "perc_messy_01",
+        "title": "Airbnb Cleanup Assessments",
+        "task": "Scan the living room and generate a list of items that are 'out of place' and need to be tidied.",
+        "environment_ref": "messy_airbnb_living_room"
+      },
+      {
+        "id": "perc_inventory_01",
+        "title": "Supermarket Stock Gap",
+        "task": "Identify empty spaces on the cereal shelf and map them to the corresponding price tags.",
+        "environment_ref": "retail_supermarket_shelves"
+      },
+      {
+        "id": "perc_safety_01",
+        "title": "Construction Hazard Map",
+        "task": "Generate a 3D semantic map identifying 'traversable ground' vs 'loose rubble' hazards.",
+        "environment_ref": "construction_site_inspection"
+      }
+    ]
+  }
+]
