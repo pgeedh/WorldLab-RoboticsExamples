@@ -50,78 +50,78 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 #### Industrial Warehouse (Navigation)
 > **Prompt**: "A precision-mapped industrial warehouse aisle. High-contrast yellow safety lines painted on polished concrete floors. Metal racking units... Fiducial markers (QR codes) visible on shelf edges..."
 
-![Industrial Warehouse](worlds/api_renders/industrial_warehouse_logistics_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Industrial Warehouse](worlds/api_renders/industrial_warehouse_logistics_thumbnail.jpg)](https://marble.worldlabs.ai/world/ab364263-7f65-4b97-b414-7773f1ae3fcd)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/ab364263-7f65-4b97-b414-7773f1ae3fcd)**
 
 #### PCB Assembly Line (Fine Motor)
 > **Prompt**: "Macro-photography view of an electronics assembly workbench. A green PCB (Printed Circuit Board) is clamped in a holder... Nearby components: a tray of tiny 0402 resistors..."
 
-![PCB Assembly](worlds/api_renders/electronic_assembly_line_pcb_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![PCB Assembly](worlds/api_renders/electronic_assembly_line_pcb_thumbnail.jpg)](https://marble.worldlabs.ai/world/63914b19-8036-46a3-8d83-87bf29ab046a)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/63914b19-8036-46a3-8d83-87bf29ab046a)**
 
 #### Data Center (Cable Maintenance)
 > **Prompt**: "**System Role:** Senior Simulation Engineer specializing in Deformable Linear Objects (DLOs)... **Objective:** Generate a high-fidelity 3D simulation environment for 'Data Center Cable Remediation'..."
 
-![Data Center](worlds/api_renders/data_center_wire_maintenance_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Data Center](worlds/api_renders/data_center_wire_maintenance_thumbnail.jpg)](https://marble.worldlabs.ai/world/fcc76d94-2e36-4bae-bd34-65a725b4df50)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/fcc76d94-2e36-4bae-bd34-65a725b4df50)**
 
 #### Automotive Robotic Cell (Welding)
 > **Prompt**: "A heavy-industry automotive welding cell. A raw steel car chassis acts as the central workspace. Orange industrial robotic arms (KUKA-style)... Sparks from a spot welder are frozen in mid-air..."
 
-![Automotive Cell](worlds/api_renders/automotive_assembly_robotic_cell_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Automotive Cell](worlds/api_renders/automotive_assembly_robotic_cell_thumbnail.jpg)](https://marble.worldlabs.ai/world/f6291ad6-b1de-4a84-b4d7-def1f3374777)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/f6291ad6-b1de-4a84-b4d7-def1f3374777)**
 
 ### 🏥 Service & Commercial
 
 #### Hotel Reception (Concierge)
 > **Prompt**: "A 5-star hotel lobby designed for social navigation. Polished marble floors reflecting the environment... The space is populated with 'ghost' proxies of people... Luggage carts with brass railings..."
 
-![Hotel Reception](worlds/api_renders/hotel_reception_concierge_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Hotel Reception](worlds/api_renders/hotel_reception_concierge_thumbnail.jpg)](https://marble.worldlabs.ai/world/ea143b63-9aaa-4731-82fa-699d319e3467)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/ea143b63-9aaa-4731-82fa-699d319e3467)**
 
 #### Restaurant Dining (Crowded Nav)
 > **Prompt**: "A dense restaurant dining floor layout. Round tables covered in white cloth... Chairs are pulled out at irregular angles, narrowing the navigation path to <60cm. Ambient lighting is dim/moody..."
 
-![Restaurant Dining](worlds/api_renders/restaurant_dining_service_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Restaurant Dining](worlds/api_renders/restaurant_dining_service_thumbnail.jpg)](https://marble.worldlabs.ai/world/68cd246f-e7c0-4d70-a4a3-8114ca718fe1)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/68cd246f-e7c0-4d70-a4a3-8114ca718fe1)**
 
 #### Hospital Corridor (Delivery)
 > **Prompt**: "A sterile, bright hospital corridor. High-gloss vinyl flooring. Walls are white with color-coded wayfinding strips. Obstacles include a crash cart... Lighting is clinical fluorescent..."
 
-![Hospital Corridor](worlds/api_renders/hospital_corridor_medic_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Hospital Corridor](worlds/api_renders/hospital_corridor_medic_thumbnail.jpg)](https://marble.worldlabs.ai/world/5d1910e6-388c-427e-b46b-3afcd3f37da1)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/5d1910e6-388c-427e-b46b-3afcd3f37da1)**
 
 #### Supermarket Shelves (Inventory)
 > **Prompt**: "A planogram-compliant supermarket aisle. Shelves are fully stocked with colorful cereal boxes... Several items are intentionally missing (out-of-stock) to test gap detection. Price tags on the shelf edge are legible..."
 
-![Supermarket](worlds/api_renders/retail_supermarket_shelves_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Supermarket](worlds/api_renders/retail_supermarket_shelves_thumbnail.jpg)](https://marble.worldlabs.ai/world/617f71d8-cdc2-482a-9404-f7b52742b7f5)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/617f71d8-cdc2-482a-9404-f7b52742b7f5)**
 
 ### 🚧 Outdoor & Unstructured
 
 #### City Sidewalk (Delivery Rover)
 > **Prompt**: "First-person view from a delivery rover on a city sidewalk. Paved concrete slabs with cracks and chewing gum stains. A fire hydrant (red) and a parking meter (gray) act as static obstacles..."
 
-![City Sidewalk](worlds/api_renders/city_sidewalk_delivery_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![City Sidewalk](worlds/api_renders/city_sidewalk_delivery_thumbnail.jpg)](https://marble.worldlabs.ai/world/f55d87b3-5b04-4957-b0c6-c5b61b2515cc)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/f55d87b3-5b04-4957-b0c6-c5b61b2515cc)**
 
 #### Construction Site (Quadruped Locomotion)
 > **Prompt**: "An active chaotic construction site. Ground is uneven, covered in loose gravel and sand. Piles of red bricks and wooden pallets create traversability barriers. Exposed steel rebar acts as a snagging hazard..."
 
-![Construction Site](worlds/api_renders/construction_site_inspection_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Construction Site](worlds/api_renders/construction_site_inspection_thumbnail.jpg)](https://marble.worldlabs.ai/world/34fa8a79-cf28-4301-bf4d-18dad73beae3)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/34fa8a79-cf28-4301-bf4d-18dad73beae3)**
 
 #### Disaster Zone (Search & Rescue)
 > **Prompt**: "A simulated post-earthquake rubble pile. Broken slabs of concrete, twisted rebar, and shattered glass... Atmospheric dust/haze reduces visibility to 80%. Lighting is low-angle, simulating dusk..."
 
-![Disaster Zone](worlds/api_renders/disaster_rubble_search_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Disaster Zone](worlds/api_renders/disaster_rubble_search_thumbnail.jpg)](https://marble.worldlabs.ai/world/c1960823-f5ab-408c-b105-1db841f49276)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/c1960823-f5ab-408c-b105-1db841f49276)**
 
 #### Agricultural Field (Perception)
 > **Prompt**: "A robotic agriculture perception dataset. Parallel rows of green corn crops, approximately 1.5m high. The inter-row path is dirt with random weeds. Sunlight is directly overhead (noon)..."
 
-![Agricultural Field](worlds/api_renders/agricultural_field_crop_thumbnail.jpg)
-*Run generation script to create interactive world.*
+[![Agricultural Field](worlds/api_renders/agricultural_field_crop_thumbnail.jpg)](https://marble.worldlabs.ai/world/0b265eee-01c6-4c5c-8a0b-8ec9ac53d9da)
+👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/0b265eee-01c6-4c5c-8a0b-8ec9ac53d9da)**
 
 ---
 
