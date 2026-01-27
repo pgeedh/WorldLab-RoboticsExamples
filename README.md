@@ -2,7 +2,7 @@
 
 # 🌍🤖 World Labs Robotics Examples
 
-**The Definitive Resource for Spatial Intelligence in Robotics**  
+**Hyper-realistic "Digital Twins" for robotics training generated via World Labs LWMs**  
 *Powered by [World Labs](https://www.worldlabs.ai/)*
 
 [![World Labs API](https://img.shields.io/badge/World%20Labs-API%20v1-black?style=for-the-badge&logo=openai&logoColor=white)](https://platform.worldlabs.ai)

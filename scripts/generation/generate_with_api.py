@@ -130,6 +130,15 @@ def download_file(url, filepath):
 
 if __name__ == "__main__":
     if check_api_key():
+        # Load existing URLs to avoid regenerating
+        existing_urls = {}
+        if os.path.exists("generated_urls.json"):
+            try:
+                with open("generated_urls.json", "r") as f:
+                    existing_urls = json.load(f)
+            except:
+                pass
+
         # Enhanced scenarios with "Senior Simulation Engineer" level detail for robotics training
         scenarios = [
             # --- Domestic & Residential ---
@@ -203,4 +212,9 @@ if __name__ == "__main__":
 
         print(f"🤖 Queuing {len(scenarios)} worlds for generation...")
         for s in scenarios:
+            if s["name"] in existing_urls:
+                print(f"⏭️  Skipping '{s['name']}' (Already generated).")
+                continue
+            
             generate_world_from_text(s["prompt"], s["name"])
+            time.sleep(2) # Add small delay to respect rate limits
