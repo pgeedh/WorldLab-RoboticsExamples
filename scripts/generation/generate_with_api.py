@@ -96,8 +96,27 @@ def handle_success(world_data, output_dir, base_filename):
     if thumb_url:
         download_file(thumb_url, os.path.join(output_dir, f"{base_filename}_thumbnail.jpg"))
         
+    world_url = world_data.get('world_marble_url')
     print(f"✅ World '{world_data.get('display_name')}' generated successfully!")
-    print(f"   View in Marble: {world_data.get('world_marble_url')}")
+    print(f"   View in Marble: {world_url}")
+    
+    # Save URL to file
+    try:
+        data = {}
+        if os.path.exists("generated_urls.json"):
+            with open("generated_urls.json", "r") as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    pass
+        
+        data[base_filename] = world_url
+        
+        with open("generated_urls.json", "w") as f:
+            json.dump(data, f, indent=2)
+            
+    except Exception as e:
+        print(f"❌ Failed to save URL to file: {e}")
 
 def download_file(url, filepath):
     try:
