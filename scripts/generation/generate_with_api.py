@@ -111,74 +111,74 @@ def download_file(url, filepath):
 
 if __name__ == "__main__":
     if check_api_key():
-        # Enhanced scenarios with "Digital Twin" level detail for robotics training
+        # Enhanced scenarios with "Senior Simulation Engineer" level detail for robotics training
         scenarios = [
             # --- Domestic & Residential ---
             {
                 "name": "domestic_kitchen_robotics",
-                "prompt": "A hyper-realistic, robot-centric digital twin of a modern domestic kitchen. Captured from a 1.2m height (robot eye level). Key interaction zones include a granite island with specific grasping targets: a glossy red apple, a matte ceramic mug with a handle facing right, and a white flat plate. Lighting is even, diffuse studio lighting to minimize harsh shadows. The floor is hardwood with clear traction texture. No motion blur. optimized for object detection and depth estimation."
+                "prompt": "**System Role:** Senior Simulation Engineer. **Objective:** Generate a high-fidelity digital twin of a 'Domestic Kitchen for Manipulation Training'. **1. Scene:** Modern kitchen, 1.2m robot-eye height. **2. Lighting:** Even, diffuse studio lighting (HDRI) to minimize shadows. **3. Key Objects:** Granite island surface (Friction coeff: 0.6) containing: Glossy Red Apple (Sub-surface scattering enabled), Matte Ceramic Mug (Handle orientation: 90 deg relative to camera), White Flat Plate. **4. Physics Constraints:** Objects must have realistic mass properties (Apple: 150g, Mug: 300g). **5. Visuals:** 8k texture resolution, no motion blur, clear segmentation boundaries."
             },
             {
                 "name": "cluttered_bedroom_manipulation",
-                "prompt": "A physically simulated messy bedroom for high-complexity manipulation training. A tangled pile of laundry (red t-shirt, blue jeans, white socks) rests on an unmade bed with wrinkled linens. The floor is scattered with hardcover books, circular plastic toys, and a charging cable. Textures are high-fidelity to test segmentation algorithms. Soft morning light entering from a window on the left, casting realistic shadows for volumetric reasoning."
+                "prompt": "**System Role:** Cloth Simulation Specialist. **Objective:** Generate a 'Complex Deformable Object' environment. **1. Scene:** Messy Bedroom. **2. Objects (Laundry):** Red T-Shirt (Cotton, 200gsm), Blue Jeans (Denim, stiff fabric), White Socks. **3. Layout:** Tangled pile state on an unmade bed (wrinkled linens). **4. Clutter:** Hardcover books and circular rigid plastic toys scattered on floor. **5. Lighting:** Soft morning light (Directional) to create volumetric shadows for geometric reasoning. **6. Complexity:** High-frequency textures for segmentation testing."
             },
             {
                 "name": "messy_airbnb_living_room",
-                "prompt": "A 'lived-in' living room state for housekeeping robots. An open suitcase sits on a rug, spilling patterned clothing. A coffee table is cluttered with empty soda cans, a crumpled magazine, and a TV remote. Cushions are thrown haphazardly on the floor. The scene tests the robot's ability to distinguish between 'trash' (cans) and 'personal items' (clothing). Photorealistic, 8k resolution, neutral color temperature."
+                "prompt": "**System Role:** Service Robotics Evaluator. **Objective:** Generate a 'Housekeeping Assessment' scene. **1. Scene:** Lived-in Living Room. **2. Semantic Classes:** 'Trash' (Crumpled Aluminum Soda Cans, Glossy Magazine wrappers) vs 'Personal Items' (Patterned Clothing, Electronics). **3. Layout:** Open suitcase on rug, items spilling out. **4. Visuals:** High dynamic range (HDR) to capture specular reflections on cans vs matte fabrics. Neutral color temperature (5000K)."
             },
             
             # --- Industrial & Logistics ---
             {
                 "name": "industrial_warehouse_logistics",
-                "prompt": "A precision-mapped industrial warehouse aisle. High-contrast yellow safety lines painted on polished concrete floors. Metal racking units on both sides are stocked with brown cardboard boxes of uniform size (30x30cm), some slightly misaligned to test grasping tolerance. Bright, cool-white overhead LED lighting strips to eliminate dark corners. Fiducial markers (QR codes) visible on shelf edges for localization."
+                "prompt": "**System Role:** warehouse Automation Engineer. **Objective:** Generate a 'Path Planning & Localization' environment. **1. Scene:** Industrial Aisle (ISO standard width). **2. Floor:** Polished Concrete with High-Contrast Yellow Safety Tape. **3. Racking:** Metal shelving, populated with uniform Brown Cardboard Boxes (30x30x30cm). **4. Constraints:** Introduce alignment noise (±5 degrees) to boxes. **5. Markers:** AprilTags (Fiducials) visible on rack uprights. **6. Lighting:** Cool White LED strips (6000K), uniform illumination."
             },
             {
                 "name": "electronic_assembly_line_pcb",
-                "prompt": "Macro-photography view of an electronics assembly workbench. A green PCB (Printed Circuit Board) is clamped in a holder. Solder flux residue is visible. Nearby components: a tray of tiny 0402 resistors, a soldering iron with a oxidized tip, and a pair of fine-point tweezers. The lighting is a focused ring light to highlight metallic leads and solder joints for defect detection algorithms. Depth of field is shallow, focused on the PCB."
+                "prompt": "**System Role:** Precision Manufacturing Engineer. **Objective:** Generate a 'Micro-Manipulation' workbench. **1. View:** Macro-photography close-up. **2. Subject:** Green PCB (FR4 material) clamped in fixture. **3. Components:** 0402 Resistors (Tray), Soldering Iron (Oxidized tip), Fine-point Tweezers. **4. Solder Joints:** Shiny silver texture (Lead-free). **5. Lighting:** Ring light macro setup to highlight metallic leads. Shallow depth of field (Bokeh background)."
             },
             {
                 "name": "data_center_wire_maintenance",
-                "prompt": "A narrow server aisle in a hyperscale data center. Densely packed server racks with blinking status LEDs (green/amber). The focus is on the rear cable management area: a chaotic mix of blue (CAT6) and orange (Fiber) cables. Some cables are unplugged and hanging loose. The environment is metallic, reflective, and cool-toned. Intricate geometry for occlusion testing. 4k resolution."
+                "prompt": "**System Role:** Senior Simulation Engineer specializing in Deformable Linear Objects (DLOs). **Objective:** Generate a high-fidelity 3D simulation environment for 'Data Center Cable Remediation'. **1. Scene:** Standard 42U Data Center Server Rack. Lighting: Dim, overhead with localized shadowing. Focus: Rack Unit 14 (RU14). Target: Switch Port 12 (empty/highlighted). **2. Object (Cable):** Standard CAT6 Ethernet Cable, Blue (#0000FF). Physics: Deformable Linear Object (DLO) with semi-rigid PVC stiffness (Young's Modulus ~0.05 GPa) to prevent self-intersections. Connector: RJ45 male with a fragile locking clip. **3. Task:** Rear cable management area, chaotic cabling."
             },
             {
                 "name": "automotive_assembly_robotic_cell",
-                "prompt": "A heavy-industry automotive welding cell. A raw steel car chassis acts as the central workspace. Orange industrial robotic arms (KUKA-style) are positioned around it. Sparks from a spot welder are frozen in mid-air (simulated). The floor is metal grating. Warning signs and safety cages are clearly visible globally. High dynamic range lighting to handle the brightness of welding arcs."
+                "prompt": "**System Role:** Industrial Robotics Safety Officer. **Objective:** Generate a 'Heavy Industry Welding Cell'. **1. Central Asset:** Raw Steel Car Chassis (White Body). **2. Robots:** 2x KUKA-style Orange Industrial Arms. **3. Effects:** Frozen welding sparks (Particle system). **4. Environment:** Metal Grating floor, Yellow Safety Cages (Mesh texture). **5. Lighting:** High contrast, simulating welding arc brightness."
             },
 
             # --- Service & Commercial ---
             {
                 "name": "hotel_reception_concierge",
-                "prompt": "A 5-star hotel lobby designed for social navigation. Polished marble floors reflecting the environment. A high concierge desk made of mahogany. The space is populated with 'ghost' proxies of people (blurred or static) to simulate crowd density without privacy issues. Luggage carts with brass railings are obstacles. Warm, inviting architectural lighting. Wide angle field of view."
+                "prompt": "**System Role:** Social Navigation Architect. **Objective:** Generate a 'Human-Robot Interaction' lobby. **1. Surface:** Highly reflective Polished Marble (Ray-tracing enabled). **2. Key Asset:** Mahogany Concierge Desk. **3. Dynamic Agents:** 'Ghost' proxies of humans (Blurred) to indicate crowd density. **4. Obstacles:** Brass Luggage Carts. **5. Atmosphere:** Warm, inviting, architectural lighting (3000K). Wide-angle lens distortion correction."
             },
             {
                 "name": "restaurant_dining_service",
-                "prompt": "A dense restaurant dining floor layout. Round tables covered in white cloth, set with silverware and transparent wine glasses (challenging for LiDAR). Chairs are pulled out at irregular angles, narrowing the navigation path to <60cm. Ambient lighting is dim/moody, testing low-light camera performance. Background features a blurred busy kitchen pass."
+                "prompt": "**System Role:** Dynamic Path Planner. **Objective:** Generate a 'Constrained Navigation' dining floor. **1. Density:** High. Round tables with white cloth. **2. LiDAR Challenge:** Transparent Wine Glasses and Silverware. **3. Geometry:** Chairs rotated randomly, narrowing path width to <60cm. **4. Lighting:** Dim/Moody/Candlelight to stress low-light sensors."
             },
             {
                 "name": "hospital_corridor_medic",
-                "prompt": "A sterile, bright hospital corridor. High-gloss vinyl flooring. Walls are white with color-coded wayfinding strips. Obstacles include a crash cart, a wheelchair folded against the wall, and an IV drip stand on wheels. Lighting is clinical fluorescent, 5000K temperature. Ceiling convex mirrors are visible at intersections. Designed for autonomous delivery robot verification."
+                "prompt": "**System Role:** Healthcare Logistics Planner. **Objective:** Generate a 'Sterile Delivery Route'. **1. Scene:** Hospital Corridor. **2. Flooring:** High-gloss Vinyl (White/Blue tint). **3. Semantics:** Color-coded wall strips for Wayfinding. **4. Obstacles:** Red Crash Cart, Folded Wheelchair, IV Drip Stand (Thin geometry). **5. Lighting:** Clinical Fluorescent (Flicker-free). **6. Safety:** Convex mirrors at blind corners."
             },
             {
                 "name": "retail_supermarket_shelves",
-                "prompt": "A planogram-compliant supermarket aisle. Shelves are fully stocked with colorful cereal boxes, creating a high-frequency visual texture. Several items are intentionally missing (out-of-stock) to test gap detection. Price tags on the shelf edge are legible. The floor is white tile. Lighting is uniform to ensure color accuracy for product recognition."
+                "prompt": "**System Role:** Retail Inventory Analyst. **Objective:** Generate a 'Planogram Compliance' view. **1. Asset:** Supermarket Gondola Shelving. **2. Stock:** Colorful Cereal Boxes (Dense texture). **3. Task:** intentionally missing items (Out-of-Stock gaps). **4. Details:** Price tags readable on shelf edge. **5. Lighting:** Uniform, flat lighting for OCR/Barcode reading."
             },
 
             # --- Outdoor & Unstructured ---
             {
                 "name": "city_sidewalk_delivery",
-                "prompt": "First-person view from a delivery rover on a city sidewalk. Paved concrete slabs with cracks and chewing gum stains. A fire hydrant (red) and a parking meter (gray) act as static obstacles. The curb drops off to a tarmac road. Sunlight casts hard shadows from a nearby tree, creating deceptive contrast patterns on the ground. Urban background."
+                "prompt": "**System Role:** Autonomous Driving Engineer (Last Mile). **Objective:** Generate a 'Urban Sidewalk' segment. **1. View:** Rover First-Person (0.5m height). **2. Material:** Concrete Pavement with cracks and gum stains. **3. Static Obstacles:** Red Fire Hydrant, Gray Parking Meter. **4. Hazards:** Curb drop-off to Tarmac road. **5. Lighting:** Harsh Sunlight (Noon) creating hard, deceptive shadows from tree branches."
             },
             {
                 "name": "construction_site_inspection",
-                "prompt": "An active chaotic construction site. Ground is uneven, covered in loose gravel and sand. Piles of red bricks and wooden pallets create traversability barriers. Exposed steel rebar acts as a snagging hazard. Lighting simulates an overcast day (diffuse light). Geometrical complexity is high for testing quadruped locomotion and footstep planning."
+                "prompt": "**System Role:** Terrain Locomotion Specialist. **Objective:** Generate a 'Rough Terrain' inspection site. **1. Ground:** Loose Gravel and Sand (Non-rigid). **2. Obstacles:** Piles of Red Bricks, Wooden Pallets, Exposed Steel Rebar (Snag hazard). **3. Lighting:** Overcast/Diffuse (Flat contrast). **4. Requirement:** High geometric complexity for footstep planning."
             },
             {
                 "name": "disaster_rubble_search",
-                "prompt": "A simulated post-earthquake rubble pile. Broken slabs of concrete, twisted rebar, and shattered glass. The terrain is highly non-convex with deep crevices. Atmospheric dust/haze reduces visibility to 80%. Lighting is low-angle, simulating dusk, casting long shadows that obscure depth. Designed for Search and Rescue (SAR) robot mobility testing."
+                "prompt": "**System Role:** Search & Rescue Coordinator. **Objective:** Generate a 'Collapsed Structure' zone. **1. Terrain:** Broken Concrete Slabs, Twisted Rebar, Shattered Glass. **2. Topology:** Non-convex with deep crevices/voids. **3. Atmosphere:** Heavy Dust/Haze (Visibility <80%). **4. Lighting:** Low-angle Dusk sun, long shadows obscuring depth. **5. Task:** Volumetric void estimation."
             },
             {
                 "name": "agricultural_field_crop",
-                "prompt": "A robotic agriculture perception dataset. Parallel rows of green corn crops, approximately 1.5m high. The inter-row path is dirt with random weeds. Sunlight is directly overhead (noon), creating high contrast between leaves and shadows. Variable crop health (brown leaves) is visible for disease detection tasks."
+                "prompt": "**System Role:** Precision Agriculture Specialist. **Objective:** Generate a 'Crop Monitoring' dataset. **1. Subject:** Green Corn Crops (Zea mays), 1.5m height. **2. Layout:** Parallel rows, dirt path inter-row. **3. Lighting:** Direct overhead sunlight (High contrast). **4. Variable:** Introduce random Brown Leaves (simulate disease) for anomaly detection."
             }
         ]
 
