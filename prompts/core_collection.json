@@ -4,32 +4,48 @@
     "prompts": [
       {
         "id": "nav_social_01",
-        "title": "Hotel Lobby Navigation",
-        "task": "Navigate from the entrance to the reception desk without entering the personal space of waiting guests.",
+        "title": "Hotel Lobby VIP Escort",
+        "task": "Initiate social navigation mode. Start at the main revolving door entrance (Point A) and navigate to the concierge desk (Point B) located 15 meters North. The path is populated with dynamic agents (hotel guests) standing in clusters. Maintain a strictly enforced social safety buffer of 1.2 meters from all humans. Detect and yield to a luggage trolley moving tangentially from the left. Optimize path smoothness to minimize accelerations (jerk < 0.5 m/s³) to project a calm, high-end service demeanor.",
         "environment_ref": "hotel_reception_concierge",
         "constraints": [
-          "Keep 1m distance from humans",
-          "Smooth acceleration"
+          "Min Distance: 1.2m",
+          "Max Speed: 0.8m/s",
+          "Yield Priority: Humans > Carts > Self"
+        ],
+        "success_metrics": [
+          "No buffer violations",
+          "Path efficiency > 85%",
+          "Smoothness score"
         ]
       },
       {
         "id": "nav_urban_01",
-        "title": "Sidewalk Obstacle Avoidance",
-        "task": "Traverse the sidewalk segment while avoiding static obstacles (hydrants) and dynamic zones (doorways).",
+        "title": "Urban Sidewalk Delivery",
+        "task": "Traverse the city sidewalk segment (50m stretch). Semantic segmentation must identify: 'pavement' (traversable), 'road' (forbidden), 'curb' (drop-off hazard), and 'pole' (static obstacle). Execute a local avoidance maneuver around the red fire hydrant while remaining strictly within the pavement boundaries (+/- 10cm safety margin from curb). Slow down to 0.5m/s when passing the building entrance to scan for emerging pedestrians.",
         "environment_ref": "city_sidewalk_delivery",
         "constraints": [
-          "Stay within pavement boundaries",
-          "Yield at crosswalk"
+          "Stay on Pavement",
+          "Avoid Dynamic Obstacles",
+          "Maintain GPS Lock"
+        ],
+        "success_metrics": [
+          "Time to goal",
+          "Safety margin maintenance"
         ]
       },
       {
         "id": "nav_narrow_01",
-        "title": "Restaurant Table Service",
-        "task": "Move from the kitchen pass to Table 4 through the narrow gap between occupied chairs.",
+        "title": "Fine-Grained Restaurant Pathing",
+        "task": "Navigate the 'Wait-Staff' robot from the kitchen pass to Table 4. The available corridor width is restricted to 65cm due to occupied chairs. Use LiDAR and RGB-D fusion to precisely map the chair legs. Perform a strafing maneuever if necessary to clear the narrowest point without contacting any furniture. DO NOT disturb the hanging tablecloths. Stop immediately if a guest stands up.",
         "environment_ref": "restaurant_dining_service",
         "constraints": [
-          "Minimize vibration",
-          "No collision"
+          "Clearance: >5cm",
+          "No Collision",
+          "Silent Operation"
+        ],
+        "success_metrics": [
+          "Contact-free traversal",
+          "Guest disturbance level: 0"
         ]
       }
     ]
@@ -39,24 +55,36 @@
     "prompts": [
       {
         "id": "manip_fine_01",
-        "title": "PCB Component Inspection",
-        "task": "Locate the C4 capacitor on the PCB and position the camera for a macro inspection of the solder joints.",
+        "title": "Micro-soldering Quality Control",
+        "task": "Position the end-effector camera at a 45-degree angle relative to the green PCB. Engage macro-focus mode. Locate the designated component 'R201' (0402 resistor). use visual servoing to center the component. Analyze the solder joint fillets for 'cold solder' signatures (dull/granular texture vs shiny). If defect found, tag location in the CAD coordinate frame.",
         "environment_ref": "electronic_assembly_line_pcb",
-        "target": "C4 Capacitor",
-        "action": "Visual Inspection"
+        "target": "R201 0402 Resistor",
+        "action": "Visual Inspection & Defect Classification",
+        "constraints": [
+          "ISO-9001 Inspection Standard",
+          "No physical contact"
+        ]
       },
       {
         "id": "manip_cable_01",
-        "title": "Data Center Cable Plug-in",
-        "task": "Identify the loose blue ethernet cable and insert it into Port 12 of Server Rack B.",
+        "title": "Data Center Cable Remediation",
+        "task": "Identify the disconnected blue CAT6 ethernet cable hanging in Rack Unit 14. Compute a 6-DOF grasp pose for the connector head, avoiding the locking clip to prevent damage. Plan a collision-free arm trajectory to insert the connector into Switch Port 12. Apply a linear force of 15N to click it into place, then reverse 2mm to verify latch engagement.",
         "environment_ref": "data_center_wire_maintenance",
-        "complexity": "Extremely High"
+        "complexity": "Extremely High (Deformable Object)",
+        "constraints": [
+          "Force Limit: 20N",
+          "Avoid tangling"
+        ]
       },
       {
         "id": "manip_household_01",
-        "title": "Laundry Sorting",
-        "task": "Pick up the red t-shirt from the bed and place it in the hamper, distinguishing it from the white sheets.",
-        "environment_ref": "cluttered_bedroom_manipulation"
+        "title": "Domestic Laundry Sorting",
+        "task": "Segment the pile of laundry on the bed. Isolate the 'red t-shirt'. Calculate a grasp point on the fabric centroid to ensure stability. Lift the item using a pinch grasp. Classify the material type (Cotton). Rotate 90 degrees and release the item into the 'Colors' hamper, strictly avoiding the 'Whites' hamper. Ignore the white socks nearby.",
+        "environment_ref": "cluttered_bedroom_manipulation",
+        "constraints": [
+          "Grasp Stability > 90%",
+          "Correct Classification"
+        ]
       }
     ]
   },
@@ -65,21 +93,27 @@
     "prompts": [
       {
         "id": "perc_messy_01",
-        "title": "Airbnb Cleanup Assessments",
-        "task": "Scan the living room and generate a list of items that are 'out of place' and need to be tidied.",
-        "environment_ref": "messy_airbnb_living_room"
+        "title": "Semantic Housekeeping Assessment",
+        "task": "Perform a semantic scan of the Airbnb living room. Categorize all detected ground objects into two classes: 'Trash' (e.g., soda cans, wrappers) and 'Personal Belongings' (e.g., clothes, electronics). Generate a cleaning plan that involves picking up 'Trash' objects while strictly geofencing 'Personal Belongings' as 'Do Not Touch' zones. Output the centroid coordinates of the soda can.",
+        "environment_ref": "messy_airbnb_living_room",
+        "output_format": "JSON Object List"
       },
       {
         "id": "perc_inventory_01",
-        "title": "Supermarket Stock Gap",
-        "task": "Identify empty spaces on the cereal shelf and map them to the corresponding price tags.",
-        "environment_ref": "retail_supermarket_shelves"
+        "title": "Retail Planogram Compliance",
+        "task": "Traverse the cereal aisle at a constant velocity of 0.2 m/s. Capture high-res frames of Shelf B. Run Object Detection to count the facing stock of 'Corn Flakes'. Compare the detected count (e.g., 3) against the database expectation (e.g., 5). Flag the gap location. Verify if the price tag '2.99' matches the product above it using OCR.",
+        "environment_ref": "retail_supermarket_shelves",
+        "metrics": [
+          "Count Accuracy",
+          "OCR Confidence"
+        ]
       },
       {
         "id": "perc_safety_01",
-        "title": "Construction Hazard Map",
-        "task": "Generate a 3D semantic map identifying 'traversable ground' vs 'loose rubble' hazards.",
-        "environment_ref": "construction_site_inspection"
+        "title": "Volumetric Hazard Mapping",
+        "task": "Survey the disaster rubble zone using LiDAR. Generate a 2.5D elevation map. Classify terrain patches by traversability cost: 'Safe' (flat concrete), 'Risky' (gravel/loose debris), and 'Impassable' (large drop-offs > 30cm). Identify the void space beneath the collapsed slab as a potential survivor location. Estimate the volume of the void.",
+        "environment_ref": "disaster_rubble_search",
+        "output_format": "Grid Map Cost Layer"
       }
     ]
   }
