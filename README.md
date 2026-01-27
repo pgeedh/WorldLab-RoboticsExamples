@@ -179,3 +179,9 @@ Have a new robotics use case?
 
 ## 📜 License
 MIT License.
+
+---
+
+<div align="center">
+  <b>Made with ❤️ by <a href="https://github.com/pgeedh">Pruthvi Geedh</a></b>
+</div>
