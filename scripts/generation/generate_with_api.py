@@ -16,7 +16,7 @@ def check_api_key():
         return False
     return True
 
-def generate_world_from_text(prompt, display_name, output_dir="worlds/api_renders"):
+def generate_world_from_text(prompt, display_name, model_id="Marble 0.1-mini", output_dir="worlds/api_renders"):
     """
     Generates a world using the World Labs API from a text prompt.
     """
@@ -33,7 +33,7 @@ def generate_world_from_text(prompt, display_name, output_dir="worlds/api_render
             "type": "text",
             "text_prompt": prompt
         },
-        "model": "Marble 0.1-mini"
+        "model": model_id
     }
     
     print(f"🚀 Sending request for: '{display_name}'...")
@@ -170,7 +170,7 @@ if __name__ == "__main__":
             },
             {
                 "name": "automotive_assembly_robotic_cell",
-                "prompt": "**System Role:** Industrial Robotics Safety Officer. **Objective:** Generate a 'Heavy Industry Welding Cell'. **1. Central Asset:** Raw Steel Car Chassis (White Body). **2. Robots:** 2x KUKA-style Orange Industrial Arms. **3. Effects:** Frozen welding sparks (Particle system). **4. Environment:** Metal Grating floor, Yellow Safety Cages (Mesh texture). **5. Lighting:** High contrast, simulating welding arc brightness."
+                "prompt": "**System Role:** Industrial Automation Architect. **Objective:** Generate a 'Next-Gen Automotive Welding Station'. **1. Layout:** ISO-standard manufacturing cell with yellow perimeter fencing. **2. Equipment:** Two high-fidelity 6-DOF orange robotic arms (Glossy industrial paint) positioned for spot welding. **3. Workpiece:** Unpainted steel car chassis (Body-in-White) with visible weld points. **4. Flooring:** Heavy-duty anti-slip metal plating with oil stains. **5. Lighting:** Bright, clinical overhead LED strips (6500K) combined with intense localized blue-white welding arc light. **6. Details:** Feeder cables, control boxes, and warning signage."
             },
 
             # --- Service & Commercial ---
@@ -198,7 +198,7 @@ if __name__ == "__main__":
             },
             {
                 "name": "construction_site_inspection",
-                "prompt": "**System Role:** Terrain Locomotion Specialist. **Objective:** Generate a 'Rough Terrain' inspection site. **1. Ground:** Loose Gravel and Sand (Non-rigid). **2. Obstacles:** Piles of Red Bricks, Wooden Pallets, Exposed Steel Rebar (Snag hazard). **3. Lighting:** Overcast/Diffuse (Flat contrast). **4. Requirement:** High geometric complexity for footstep planning."
+                "prompt": "**System Role:** Advanced Robotics Simulation Engineer. **Objective:** Generate a 'Complex Construction Terrain' for quadruped verification. **1. Environment:** Active, high-density construction zone. **2. Terrain:** Chaotic mix of deep mud, loose gravel (grain size 2-5cm), and compacted sand. **3. Obstacles:** Scattered wooden pallets (broken), irregular piles of red bricks, and protruding bright orange safety rebar. **4. Geometry:** Uneven elevation changes with 15-degree slopes. **5. Lighting:** High-contrast midday sun casting sharp shadows to test depth perception. **6. Atmosphere:** Dust particles."
             },
             {
                 "name": "disaster_rubble_search",
@@ -216,5 +216,5 @@ if __name__ == "__main__":
                 print(f"⏭️  Skipping '{s['name']}' (Already generated).")
                 continue
             
-            generate_world_from_text(s["prompt"], s["name"])
+            generate_world_from_text(s["prompt"], s["name"], s.get("model", "Marble 0.1-mini"))
             time.sleep(2) # Add small delay to respect rate limits

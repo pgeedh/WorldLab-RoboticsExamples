@@ -8,7 +8,7 @@
 [![World Labs API](https://img.shields.io/badge/World%20Labs-API%20v1-black?style=for-the-badge&logo=openai&logoColor=white)](https://platform.worldlabs.ai)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-green?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 [**📚 Documentation**](https://docs.worldlabs.ai) | [**🚀 Get Started**](#-quick-start) | [**🐙 GitHub Repo**](https://github.com/pgeedh/WorldLab-RoboticsExamples)
 
@@ -66,7 +66,7 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/fcc76d94-2e36-4bae-bd34-65a725b4df50)**
 
 #### Automotive Robotic Cell (Welding)
-> **Prompt**: "A heavy-industry automotive welding cell. A raw steel car chassis acts as the central workspace. Orange industrial robotic arms (KUKA-style)... Sparks from a spot welder are frozen in mid-air..."
+> **Prompt**: "A Next-Gen Automotive Welding Station. Two high-fidelity 6-DOF orange robotic arms (Glossy industrial paint) positioned for spot welding... Bright, clinical overhead LED strips (6500K) combined with intense localized blue-white welding arc light..."
 
 [![Automotive Cell](worlds/api_renders/automotive_assembly_robotic_cell_thumbnail.jpg)](https://marble.worldlabs.ai/world/f6291ad6-b1de-4a84-b4d7-def1f3374777)
 👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/f6291ad6-b1de-4a84-b4d7-def1f3374777)**
@@ -106,7 +106,7 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/f55d87b3-5b04-4957-b0c6-c5b61b2515cc)**
 
 #### Construction Site (Quadruped Locomotion)
-> **Prompt**: "An active chaotic construction site. Ground is uneven, covered in loose gravel and sand. Piles of red bricks and wooden pallets create traversability barriers. Exposed steel rebar acts as a snagging hazard..."
+> **Prompt**: "An active, high-density construction zone... Chaotic mix of deep mud, loose gravel (grain size 2-5cm), and compacted sand. Obstacles: Scattered wooden pallets (broken), irregular piles of red bricks, and protruding bright orange safety rebar..."
 
 [![Construction Site](worlds/api_renders/construction_site_inspection_thumbnail.jpg)](https://marble.worldlabs.ai/world/34fa8a79-cf28-4301-bf4d-18dad73beae3)
 👉 **[Click to Explore 3D World](https://marble.worldlabs.ai/world/34fa8a79-cf28-4301-bf4d-18dad73beae3)**
@@ -172,8 +172,11 @@ print(f"Task: {cable_task['task']}")
 
 ## 📚 Tutorials & Integrations
 
-### 🎮 Sim-to-Real with NVIDIA Isaac Sim
-Want to take these "Digital Twins" into a physics-based simulator? Check out our complete guide on exporting World Lab models:
+### 🎮 Sim-to-Real with NVIDIA Isaac Sim & MuJoCo
+Want to take these "Digital Twins" into a physics-based simulator? Check out our complete integration guide:
+**[📖 Simulation Integration Guide: Isaac Sim & MuJoCo](docs/SIMULATION_INTEGRATION.md)**
+
+Also check out our Medium article for a deep dive:
 **[From Imagination to Simulation: A Complete Guide to Importing World Labs Marble Models into NVIDIA Isaac Sim](https://medium.com/@geedhpruthvi/from-imagination-to-simulation-a-complete-guide-to-importing-world-labs-marble-models-into-nvidia-69dde0ed5d6e?postPublishedType=initial)**
 
 ## 🤝 Contributing
