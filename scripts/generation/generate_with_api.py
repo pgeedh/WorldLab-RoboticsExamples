@@ -33,7 +33,10 @@ def generate_world_from_text(prompt, display_name, model_id="Marble 0.1-mini", o
             "type": "text",
             "text_prompt": prompt
         },
-        "model": model_id
+        "model": model_id,
+        "permission": {
+            "public": True
+        }
     }
     
     print(f"🚀 Sending request for: '{display_name}'...")
@@ -140,73 +143,75 @@ if __name__ == "__main__":
                 pass
 
         # Enhanced scenarios with "Senior Simulation Engineer" level detail for robotics training
+        # Enhanced scenarios with "World Guide" narrative prompts for high-fidelity realism
+        # "Corner Case" scenarios designed to break perception and control algorithms
         scenarios = [
             # --- Domestic & Residential ---
             {
                 "name": "domestic_kitchen_robotics",
-                "prompt": "**System Role:** Senior Simulation Engineer. **Objective:** Generate a high-fidelity digital twin of a 'Domestic Kitchen for Manipulation Training'. **1. Scene:** Modern kitchen, 1.2m robot-eye height. **2. Lighting:** Even, diffuse studio lighting (HDRI) to minimize shadows. **3. Key Objects:** Granite island surface (Friction coeff: 0.6) containing: Glossy Red Apple (Sub-surface scattering enabled), Matte Ceramic Mug (Handle orientation: 90 deg relative to camera), White Flat Plate. **4. Physics Constraints:** Objects must have realistic mass properties (Apple: 150g, Mug: 300g). **5. Visuals:** 8k texture resolution, no motion blur, clear segmentation boundaries."
+                "prompt": "**System Role:** Senior Perception Engineer. **Scene:** A neglected 1BHK kitchen in chaotic disarray. **Atmosphere:** Post-dinner catastrophe. **Details:** The laminate counter is slick with spilled oil (hazard for suction cups). A stack of white ceramic plates is precariously balanced, ready to topple. A clear glass bowl is virtually invisible against the wet sink. On the floor, a silver spoon lies hidden in a pattern of linoleum cracks—a geometric trap for wheel odometry. **Lighting:** Single flickering fluorescent bulb, creating strobing shadows."
             },
             {
                 "name": "cluttered_bedroom_manipulation",
-                "prompt": "**System Role:** Cloth Simulation Specialist. **Objective:** Generate a 'Complex Deformable Object' environment. **1. Scene:** Messy Bedroom. **2. Objects (Laundry):** Red T-Shirt (Cotton, 200gsm), Blue Jeans (Denim, stiff fabric), White Socks. **3. Layout:** Tangled pile state on an unmade bed (wrinkled linens). **4. Clutter:** Hardcover books and circular rigid plastic toys scattered on floor. **5. Lighting:** Soft morning light (Directional) to create volumetric shadows for geometric reasoning. **6. Complexity:** High-frequency textures for segmentation testing."
+                "prompt": "**System Role:** Cloth Manipulation Specialist. **Scene:** A severe 'hoarder-lite' bedroom scenario. **Atmosphere:** Overwhelming textural density. **Details:** The bed is buried under a mountain of inter-tangled fabrics: stiff denim jeans knotted around sheer silk scarves (high friction variance). The hardwood floor is covered in a minefield of small, rigid LEGO bricks and slippery glossy magazine pages. **Lighting:** Harsh dawn sunlight beaming directly into the sensor, causing lens flare and blindness."
             },
             {
                 "name": "messy_airbnb_living_room",
-                "prompt": "**System Role:** Service Robotics Evaluator. **Objective:** Generate a 'Housekeeping Assessment' scene. **1. Scene:** Lived-in Living Room. **2. Semantic Classes:** 'Trash' (Crumpled Aluminum Soda Cans, Glossy Magazine wrappers) vs 'Personal Items' (Patterned Clothing, Electronics). **3. Layout:** Open suitcase on rug, items spilling out. **4. Visuals:** High dynamic range (HDR) to capture specular reflections on cans vs matte fabrics. Neutral color temperature (5000K)."
+                "prompt": "**System Role:** Service Logic Architect. **Scene:** A party aftermath in a rental. **Atmosphere:** Semantic nightmare. **Details:** The visual clutter is deceptive: a 'valuable' open laptop is nearly indistinguishable from 'trash' pizza boxes due to similar matte black textures. A patterned Persian rug hides small dropped items like keys and coins (camouflaged objects). **Lighting:** Mixed color temperature—warm tungsten lamps vs. cool daylight window, confusing white balance."
             },
             
             # --- Industrial & Logistics ---
             {
                 "name": "industrial_warehouse_logistics",
-                "prompt": "**System Role:** warehouse Automation Engineer. **Objective:** Generate a 'Path Planning & Localization' environment. **1. Scene:** Industrial Aisle (ISO standard width). **2. Floor:** Polished Concrete with High-Contrast Yellow Safety Tape. **3. Racking:** Metal shelving, populated with uniform Brown Cardboard Boxes (30x30x30cm). **4. Constraints:** Introduce alignment noise (±5 degrees) to boxes. **5. Markers:** AprilTags (Fiducials) visible on rack uprights. **6. Lighting:** Cool White LED strips (6000K), uniform illumination."
+                "prompt": "**System Role:** Safety Systems Validator. **Scene:** A dilapidated, high-traffic logistics hub. **Atmosphere:** Hazardous and degraded. **Details:** The concrete floor is not just scuffed but pitted with potholes (1cm deep) that destabilize caster wheels. A puddle of hydraulic fluid creates a zero-friction zone. The cardboard boxes on shelves are crushed, torn, and have peeling barcodes that are essentially unreadable. **Lighting:** High-bay lights with significant glare on the wet floor spots."
             },
             {
                 "name": "electronic_assembly_line_pcb",
-                "prompt": "**System Role:** Precision Manufacturing Engineer. **Objective:** Generate a 'Micro-Manipulation' workbench. **1. View:** Macro-photography close-up. **2. Subject:** Green PCB (FR4 material) clamped in fixture. **3. Components:** 0402 Resistors (Tray), Soldering Iron (Oxidized tip), Fine-point Tweezers. **4. Solder Joints:** Shiny silver texture (Lead-free). **5. Lighting:** Ring light macro setup to highlight metallic leads. Shallow depth of field (Bokeh background)."
+                "prompt": "**System Role:** Micro-Precision QC. **Scene:** A defective electronics rework station. **Atmosphere:** High-stress precision failure. **Details:** The green PCB is covered in flux residue (sticky). The 0402 resistors are spilled and lying upside down (black side up, white text hidden). The soldering iron tip is severely oxidized and black. A rogue wire clipping bridges two critical pads—a short circuit hazard waiting to be detected. **Lighting:** Intense specular reflection from the solder mask, blinding standard RGB cameras."
             },
             {
                 "name": "data_center_wire_maintenance",
-                "prompt": "**System Role:** Senior Simulation Engineer specializing in Deformable Linear Objects (DLOs). **Objective:** Generate a high-fidelity 3D simulation environment for 'Data Center Cable Remediation'. **1. Scene:** Standard 42U Data Center Server Rack. Lighting: Dim, overhead with localized shadowing. Focus: Rack Unit 14 (RU14). Target: Switch Port 12 (empty/highlighted). **2. Object (Cable):** Standard CAT6 Ethernet Cable, Blue (#0000FF). Physics: Deformable Linear Object (DLO) with semi-rigid PVC stiffness (Young's Modulus ~0.05 GPa) to prevent self-intersections. Connector: RJ45 male with a fragile locking clip. **3. Task:** Rear cable management area, chaotic cabling."
+                "prompt": "**System Role:** DLO Simulation Lead. **Scene:** A 'Spaghetti Cable' disaster zone in a server rack. **Atmosphere:** Maintenance impossibility. **Details:** Hundreds of CAT6 cables are effectively knotted into a rigid, impenetrable mass blocking airflow. The target cable (Blue) is woven *behind* three other taut cables (Red, Yellow, Black), requiring non-linear extraction logic. The connector tab is broken off. **Lighting:** Pitch blackness, illuminated only by blinking green status LEDs (dynamic noise)."
             },
             {
                 "name": "automotive_assembly_robotic_cell",
-                "prompt": "**System Role:** Industrial Automation Architect. **Objective:** Generate a 'Next-Gen Automotive Welding Station'. **1. Layout:** ISO-standard manufacturing cell with yellow perimeter fencing. **2. Equipment:** Two high-fidelity 6-DOF orange robotic arms (Glossy industrial paint) positioned for spot welding. **3. Workpiece:** Unpainted steel car chassis (Body-in-White) with visible weld points. **4. Flooring:** Heavy-duty anti-slip metal plating with oil stains. **5. Lighting:** Bright, clinical overhead LED strips (6500K) combined with intense localized blue-white welding arc light. **6. Details:** Feeder cables, control boxes, and warning signage."
+                "prompt": "**System Role:** Industrial Safety Officer. **Scene:** An active welding cell mid-malfunction. **Atmosphere:** Dangerous and chaotic. **Details:** The car chassis is misaligned by 5 degrees on the jig. Splatter from previous welds covers the optical sensors. A hydraulic hose has burst, spraying dark fluid across the yellow safety cage. The robotic arms are frozen in a near-collision state. **Lighting:** Stroboscopic welding arcs occurring at 20Hz, creating rolling shutter artifacts on cameras."
             },
 
             # --- Service & Commercial ---
             {
                 "name": "hotel_reception_concierge",
-                "prompt": "**System Role:** Social Navigation Architect. **Objective:** Generate a 'Human-Robot Interaction' lobby. **1. Surface:** Highly reflective Polished Marble (Ray-tracing enabled). **2. Key Asset:** Mahogany Concierge Desk. **3. Dynamic Agents:** 'Ghost' proxies of humans (Blurred) to indicate crowd density. **4. Obstacles:** Brass Luggage Carts. **5. Atmosphere:** Warm, inviting, architectural lighting (3000K). Wide-angle lens distortion correction."
+                "prompt": "**System Role:** Social Interaction Designer. **Scene:** A grand hotel lobby during a crisis evacuation drill. **Atmosphere:** Kinetic and confusing. **Details:** The highly reflective marble floor creates perfect 'phantom' obstacles via reflection. Luggage carts are overturned. 'Ghost' pedestrians are moving erratically and fast (1.5m/s), violating all social force models. **Lighting:** Emergency strobe lights activated, washing out color consistency."
             },
             {
                 "name": "restaurant_dining_service",
-                "prompt": "**System Role:** Dynamic Path Planner. **Objective:** Generate a 'Constrained Navigation' dining floor. **1. Density:** High. Round tables with white cloth. **2. LiDAR Challenge:** Transparent Wine Glasses and Silverware. **3. Geometry:** Chairs rotated randomly, narrowing path width to <60cm. **4. Lighting:** Dim/Moody/Candlelight to stress low-light sensors."
+                "prompt": "**System Role:** Navigation Planner. **Scene:** A claustrophobic fine-dining layout. **Atmosphere:** Worst-case traversability. **Details:** The gap between chairs is exactly 45cm (robot width: 50cm). Tablecloths hang low, obscuring chair legs (hidden obstacles). Tables are covered in purely transparent crystal glasses and mirrors—an absolute nightmare for LiDAR and Depth sensors. **Lighting:** Candlelight only (0.5 lux), pushing ISO capabilities to the limit."
             },
             {
                 "name": "hospital_corridor_medic",
-                "prompt": "**System Role:** Healthcare Logistics Planner. **Objective:** Generate a 'Sterile Delivery Route'. **1. Scene:** Hospital Corridor. **2. Flooring:** High-gloss Vinyl (White/Blue tint). **3. Semantics:** Color-coded wall strips for Wayfinding. **4. Obstacles:** Red Crash Cart, Folded Wheelchair, IV Drip Stand (Thin geometry). **5. Lighting:** Clinical Fluorescent (Flicker-free). **6. Safety:** Convex mirrors at blind corners."
+                "prompt": "**System Role:** Emergency Logistics Planner. **Scene:** A hospital corridor during a 'Code Blue'. **Atmosphere:** Maximum urgency and obstruction. **Details:** The floor is strewn with discarded medical gloves and saline puddles (slip hazards). A gurney has been left diagonally across the path, blocking 80% of the width. Hanging IV lines dangle at head-height, invisible to ground LiDAR. **Lighting:** harsh, sterile white, but with significant glare on the wet floor."
             },
             {
                 "name": "retail_supermarket_shelves",
-                "prompt": "**System Role:** Retail Inventory Analyst. **Objective:** Generate a 'Planogram Compliance' view. **1. Asset:** Supermarket Gondola Shelving. **2. Stock:** Colorful Cereal Boxes (Dense texture). **3. Task:** intentionally missing items (Out-of-Stock gaps). **4. Details:** Price tags readable on shelf edge. **5. Lighting:** Uniform, flat lighting for OCR/Barcode reading."
+                "prompt": "**System Role:** Inventory Audit Specialist. **Scene:** A grocery aisle after an earthquake simulation. **Atmosphere:** Structural entropy. **Details:** Glass jars of pasta sauce have fallen and shattered—red liquid and broken glass cover the floor. Cereal boxes are crushed. The shelves themselves are warped and leaning. Price tags are ripped or fallen. **Lighting:** Flickering overhead tube, simulating a failing ballast."
             },
 
             # --- Outdoor & Unstructured ---
             {
                 "name": "city_sidewalk_delivery",
-                "prompt": "**System Role:** Autonomous Driving Engineer (Last Mile). **Objective:** Generate a 'Urban Sidewalk' segment. **1. View:** Rover First-Person (0.5m height). **2. Material:** Concrete Pavement with cracks and gum stains. **3. Static Obstacles:** Red Fire Hydrant, Gray Parking Meter. **4. Hazards:** Curb drop-off to Tarmac road. **5. Lighting:** Harsh Sunlight (Noon) creating hard, deceptive shadows from tree branches."
+                "prompt": "**System Role:** Urban Autonomy Lead. **Scene:** A city sidewalk during a heavy rainstorm aftermath. **Atmosphere:** Wet, reflective, and deceptive. **Details:** Large puddles reflect the sky, appearing as 'holes' to stereo cameras. Wet leaves cover the path, hiding the curb edge. A scooter is parked horizontally across the path. Manhole covers are slick metal. **Lighting:** Overcast, but with high-glare reflections from wet surfaces."
             },
             {
                 "name": "construction_site_inspection",
-                "prompt": "**System Role:** Advanced Robotics Simulation Engineer. **Objective:** Generate a 'Complex Construction Terrain' for quadruped verification. **1. Environment:** Active, high-density construction zone. **2. Terrain:** Chaotic mix of deep mud, loose gravel (grain size 2-5cm), and compacted sand. **3. Obstacles:** Scattered wooden pallets (broken), irregular piles of red bricks, and protruding bright orange safety rebar. **4. Geometry:** Uneven elevation changes with 15-degree slopes. **5. Lighting:** High-contrast midday sun casting sharp shadows to test depth perception. **6. Atmosphere:** Dust particles."
+                "prompt": "**System Role:** Quadruped Locomotion Expert. **Scene:** A 'Torture Test' construction ground. **Atmosphere:** Mechanically hostile. **Details:** Deep sticky clay mud (sinkage >5cm). Hidden loose rebar spikes buried just below the sand surface (impaling hazard). Unstable stacks of bricks that will collapse if touched. Sharp metal scrap everywhere. **Lighting:** Blind blinding sun glare off a sheet of galvanized steel."
             },
             {
                 "name": "disaster_rubble_search",
-                "prompt": "**System Role:** Search & Rescue Coordinator. **Objective:** Generate a 'Collapsed Structure' zone. **1. Terrain:** Broken Concrete Slabs, Twisted Rebar, Shattered Glass. **2. Topology:** Non-convex with deep crevices/voids. **3. Atmosphere:** Heavy Dust/Haze (Visibility <80%). **4. Lighting:** Low-angle Dusk sun, long shadows obscuring depth. **5. Task:** Volumetric void estimation."
+                "prompt": "**System Role:** USAR Robotics Lead. **Scene:** A text book 'pancake collapse' reinforced concrete structure. **Atmosphere:** Claustrophobic and toxic. **Details:** Narrow void spaces (<40cm) lined with sharp, rusted rebar mesh. Pulverized drywall dust hangs in the air, scattering all active depth sensors (LiDAR bloom). **Lighting:** Total darkness, requiring the robot's onboard floodlight which reflects off the dust."
             },
             {
                 "name": "agricultural_field_crop",
-                "prompt": "**System Role:** Precision Agriculture Specialist. **Objective:** Generate a 'Crop Monitoring' dataset. **1. Subject:** Green Corn Crops (Zea mays), 1.5m height. **2. Layout:** Parallel rows, dirt path inter-row. **3. Lighting:** Direct overhead sunlight (High contrast). **4. Variable:** Introduce random Brown Leaves (simulate disease) for anomaly detection."
+                "prompt": "**System Role:** Ag-Bot Perception Lead. **Scene:** A cornfield devastated by wind damage (lodging). **Atmosphere:** Tangled biological chaos. **Details:** The corn stalks are not upright; they are bent at 45-degree angles, creating an impenetrable web. Weeds match the crop color perfectly (Green-on-Green segmentation challenge). **Lighting:** Dappled sunlight through the canopy, creating high-frequency shadow noise."
             }
         ]
 
