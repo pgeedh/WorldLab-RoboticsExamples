@@ -30,8 +30,8 @@ Below are the "Digital Twin" blueprints available in this repository. Each promp
 #### Domestic Kitchen (Robotics Training)
 > **Prompt**: "A hyper-realistic, robot-centric digital twin of a modern domestic kitchen. Captured from a 1.2m height (robot eye level). Key interaction zones include a granite island with specific grasping targets..."
 
-[![Domestic Kitchen](worlds/api_renders/domestic_kitchen_robotics_thumbnail.jpg)]([https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5](https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237?mode=view))
-👉 **[Click to Explore 3D World]([https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5](https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237?mode=view))**
+[![Domestic Kitchen](worlds/api_renders/domestic_kitchen_robotics_thumbnail.jpg)]([https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5]([https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237?mode=view](https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237)))
+👉 **[Click to Explore 3D World]([[https://marble.worldlabs.ai/world/7d2f87be-7c76-4367-873c-e6833b8965e5](https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237)](https://marble.worldlabs.ai/world/dd1ffaee-f8d5-4632-870e-c37e40d44237?mode=view))**
 
 #### Cluttered Bedroom (Manipulation)
 > **Prompt**: "A physically simulated messy bedroom for high-complexity manipulation training... A tangled pile of laundry (red t-shirt, blue jeans, white socks) rests on an unmade bed..."
